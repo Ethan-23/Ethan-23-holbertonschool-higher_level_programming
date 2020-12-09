@@ -2,9 +2,9 @@
 def fizzbuzz():
     for x in range(0, 100):
         if x % 3 is 0:
-            print(Fizz)
+            print("Fizz ", end="")
         elif x % 5 is 0:
-            print(Buzz)
+            print("Buzz ", end="")
         else:
             print("{} ".format(x), end="")
     print()

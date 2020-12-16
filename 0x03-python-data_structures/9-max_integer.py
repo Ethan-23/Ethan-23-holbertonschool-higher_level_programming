@@ -4,6 +4,6 @@ def max_integer(my_list=[]):
         return None
     z = my_list[0]
     for x in my_list:
-        if x > my_list[x]
-        z = my_list[x]
+        if x > z:
+            z = x
     return z

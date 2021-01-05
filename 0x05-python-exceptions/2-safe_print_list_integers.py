@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    for z in my_list:
+    count = 0
+    for z in range (x):
             try:
-                print("{:d}".format(z), end="")
-            except:
-                x -= 1
+                print("{:d}".format(my_list[z]), end="")
+                count += 1
+            except(ValueError, TypeError):
                 pass
     print()
-    return x
+    return count

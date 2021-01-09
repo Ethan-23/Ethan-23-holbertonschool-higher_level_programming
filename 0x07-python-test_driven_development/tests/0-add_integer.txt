@@ -1,6 +1,16 @@
->>>add_integer(1, 5)
->>>add_integer(1, five)
->>>add_integer(1, None)
->>>add_integer(1, 5t)
->>>add_integer(1, 5.54)
->>>add_integer(1, -1)
+The ``add`` module
+======================
+
+Using ``add_integer``
+-------------------
+import modual:
+>>> add_integer = __import__("0-add_integer").add_integer
+>>> add_integer(1, 5)
+6
+>>> add_integer(1, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(1, 5.54)
+6
+>>> add_integer(1, -1)
+0

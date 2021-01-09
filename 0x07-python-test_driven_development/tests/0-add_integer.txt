@@ -1,0 +1,6 @@
+>>>add_integer(1, 5)
+>>>add_integer(1, five)
+>>>add_integer(1, None)
+>>>add_integer(1, 5t)
+>>>add_integer(1, 5.54)
+>>>add_integer(1, -1)

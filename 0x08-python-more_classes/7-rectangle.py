@@ -5,12 +5,12 @@
 class Rectangle:
     """This is a class"""
     number_of_instances = 0
+    print_symbol="#"
 
-    def __init__(self, width=0, height=0, print_symbol="#"):
+    def __init__(self, width=0, height=0):
         """Sets sizes"""
         self.width = width
         self.height = height
-        self.print_symbol = print_symbol
         Rectangle.number_of_instances += 1
 
     @property

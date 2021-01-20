@@ -3,5 +3,5 @@
 
 
 def lookup(obj):
-"""return string from function dir"""
+    """return string from function dir"""
     return dir(obj)

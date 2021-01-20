@@ -4,7 +4,7 @@
 
 def is_kind_of_class(obj, a_class):
     """return true or false"""
-    if isinstance(obj, int):
+    if isinstance(obj, a_class):
         return True
     else:
         return False

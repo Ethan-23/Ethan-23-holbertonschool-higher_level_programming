@@ -86,11 +86,15 @@ class Rectangle(Base):
         elif self.height == 0:
             rectangle_str = "\n"
         else:
+            for k in range(self.y):
+                print()
             for i in range(self.height):
+                for l in range(self.x):
+                    rectangle_str += str(" ")
                 for j in range(self.width):
                     rectangle_str += str(self.print_symbol)
                 rectangle_str += "\n"
-        print (rectangle_str, end='')
+            print (rectangle_str, end='')
 
     def __str__(self):
         rectangle_str_print = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)

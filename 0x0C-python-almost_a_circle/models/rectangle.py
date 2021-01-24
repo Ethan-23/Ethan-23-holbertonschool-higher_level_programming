@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """rectangle class"""
+    print_symbol = "#"
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super(Rectangle,self).__init__(id)
@@ -76,3 +77,17 @@ class Rectangle(Base):
     def area(self):
         """AREA"""
         return self.__width * self.__height
+
+    def display(self):
+        """Display"""
+        rectangle_str = ""
+        if self.width == 0:
+            rectangle_str = "\n"
+        elif self.height == 0:
+            rectangle_str = "\n"
+        else:
+            for i in range(self.height):
+                for j in range(self.width):
+                    rectangle_str += str(self.print_symbol)
+                rectangle_str += "\n"
+        print (rectangle_str, end='')

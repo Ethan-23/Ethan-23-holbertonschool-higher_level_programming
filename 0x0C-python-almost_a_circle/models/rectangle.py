@@ -91,3 +91,7 @@ class Rectangle(Base):
                     rectangle_str += str(self.print_symbol)
                 rectangle_str += "\n"
         print (rectangle_str, end='')
+
+    def __str__(self):
+        rectangle_str_print = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return rectangle_str_print

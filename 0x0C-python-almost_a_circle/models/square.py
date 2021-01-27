@@ -7,21 +7,21 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Square class"""
+    """Square class more words"""
     def __init__(self, size, x=0, y=0, id=None):
-        '''init'''
+        '''initialize for class'''
         super(Square, self).__init__(size, size, x, y, id)
         self.size = self.width
         self.size = self.height
 
     @property
     def size(self):
-        """Property"""
+        """Property for shape"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Checks Width"""
+        """Checks Width of shape"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -30,13 +30,13 @@ class Square(Rectangle):
             self.__size = value
 
     def __str__(self):
-        '''str'''
+        '''string for shape'''
         square = "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                    self.size)
         return square
 
     def update(self, *args, **kwargs):
-        '''update'''
+        '''update for shape changes'''
         if len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
@@ -51,5 +51,5 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        '''dictionary'''
+        '''dictionary for shapes'''
         return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}

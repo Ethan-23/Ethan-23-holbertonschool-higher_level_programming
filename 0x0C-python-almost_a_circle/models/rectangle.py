@@ -7,10 +7,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """rectangle class"""
+    """rectangle class set up"""
     print_symbol = "#"
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Init'''
+        '''Initialize'''
         super(Rectangle, self).__init__(id)
         self.width = width
         self.height = height
@@ -19,12 +19,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Property"""
+        """Property set up for width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Checks Width"""
+        """Checks Width of the shape"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -34,12 +34,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """property"""
+        """property of the shape height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Checks Height"""
+        """Checks Height of shape"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -49,12 +49,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """property"""
+        """property set up for x"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """x setter"""
+        """x setter for shape"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         elif value < 0:
@@ -64,12 +64,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """property"""
+        """property set up for y"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """y setter"""
+        """y setter for the shape"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -78,11 +78,11 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
-        """AREA"""
+        """AREA of shape"""
         return self.__width * self.__height
 
     def display(self):
-        """Display"""
+        """Display of shape"""
         rectangle_str = ""
         if self.width == 0:
             rectangle_str = "\n"
@@ -109,7 +109,7 @@ class Rectangle(Base):
         return rectangle
 
     def update(self, *args, **kwargs):
-        '''update'''
+        '''update for changing things'''
         if len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]

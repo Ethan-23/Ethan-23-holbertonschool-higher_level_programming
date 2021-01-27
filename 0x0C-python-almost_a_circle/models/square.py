@@ -31,9 +31,9 @@ class Square(Rectangle):
 
     def __str__(self):
         '''str'''
-        square_str_print = "[Square] ({}) {}/{} - {}".format(self.id, self.x,
-                                                             self.y, self.size)
-        return square_str_print
+        square = "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                   self.size)
+        return square
 
     def update(self, *args, **kwargs):
         '''update'''

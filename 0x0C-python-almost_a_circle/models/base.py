@@ -15,6 +15,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return ("[]")
@@ -34,10 +35,11 @@ class Base:
             with open('{}.json'.format(cls.__name__), 'w') as file:
                 file.write(cls.to_json_string(new_dict))
 
+    @staticmethod
     def from_json_string(json_string):
-        list = ""
+        new_list = []
         if json_string is None:
-            return list
+            return new_list
         else:
             return json.loads(json_string)
 
@@ -49,3 +51,15 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        new_list = []
+        try:
+            with open('{}.json'.format(cls.__name__), 'r') as file:
+                thing = from_json_string(read(file))
+            for i in thing:
+                new_list.append(cls.create(**i))
+        except:
+            pass
+        return new_list

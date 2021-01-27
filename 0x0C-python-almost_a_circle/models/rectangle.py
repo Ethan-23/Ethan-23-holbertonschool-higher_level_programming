@@ -9,6 +9,7 @@ from models.base import Base
 class Rectangle(Base):
     """rectangle class set up"""
     print_symbol = "#"
+
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Initialize'''
         super(Rectangle, self).__init__(id)

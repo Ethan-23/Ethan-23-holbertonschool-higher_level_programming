@@ -100,7 +100,7 @@ class Rectangle(Base):
             print(rectangle_str, end='')
 
     def __str__(self):
-        '''str'''
+        '''string for rectangle'''
         rectangle = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                             self.x,
                                                             self.y,

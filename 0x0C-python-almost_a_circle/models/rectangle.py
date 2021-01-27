@@ -6,9 +6,9 @@ from models.base import Base
 class Rectangle(Base):
     """rectangle class"""
     print_symbol = "#"
-
     def __init__(self, width, height, x=0, y=0, id=None):
-        super(Rectangle,self).__init__(id)
+        '''Init'''
+        super(Rectangle, self).__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -94,13 +94,22 @@ class Rectangle(Base):
                 for j in range(self.width):
                     rectangle_str += str(self.print_symbol)
                 rectangle_str += "\n"
-            print (rectangle_str, end='')
+            print(rectangle_str, end='')
 
     def __str__(self):
-        rectangle_str_print = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        '''str'''
+        rectangle_str_print = "[Rectangle] ({}) {}/{} - {}/{}".format(s
+                                                                      elf.id,
+                                                                      self.x,
+                                                                      self.y,
+                                                                      self.wi
+                                                                      dth,
+                                                                      self.he
+                                                                      ight)
         return rectangle_str_print
 
     def update(self, *args, **kwargs):
+        '''update'''
         if len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
@@ -117,4 +126,6 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
+        '''dictionary'''
+        return {'id': self.id, 'width': self.width,
+                'height': self.height, 'x' self.x, 'y': self.y}

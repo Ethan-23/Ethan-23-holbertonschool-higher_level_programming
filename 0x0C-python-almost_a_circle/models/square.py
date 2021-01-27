@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This is a square class"""
+"""
+This is the Square Class made as a parent of the base class
+This has all the base functions for the square class
+"""
 from models.rectangle import Rectangle
 
 

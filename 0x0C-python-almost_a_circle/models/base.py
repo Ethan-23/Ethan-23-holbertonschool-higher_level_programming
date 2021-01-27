@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" Base Class"""
+"""This is the Base Class for the rectangle and the square class"""
 import json
 
 
 class Base:
-    """Base"""
+    """This is the Base class that will be built off of by other classes"""
     __nb_objects = 0
 
     def __init__(self, id=None):

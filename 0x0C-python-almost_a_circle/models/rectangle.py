@@ -101,15 +101,12 @@ class Rectangle(Base):
 
     def __str__(self):
         '''str'''
-        rectangle_str_print = "[Rectangle] ({}) {}/{} - {}/{}".format(s
-                                                                      elf.id,
-                                                                      self.x,
-                                                                      self.y,
-                                                                      self.wi
-                                                                      dth,
-                                                                      self.he
-                                                                      ight)
-        return rectangle_str_print
+        rectangle = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                            self.x,
+                                                            self.y,
+                                                            self.width,
+                                                            self.height)
+        return rectangle
 
     def update(self, *args, **kwargs):
         '''update'''
@@ -130,5 +127,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         '''dictionary'''
-        return {'id': self.id, 'width': self.width,
-                'height': self.height, 'x' self.x, 'y': self.y}
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}

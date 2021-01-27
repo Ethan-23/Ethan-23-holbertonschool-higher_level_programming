@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This is the Base Class for the rectangle and the square class"""
+"""
+This is the Base Class for the rectangle and the square class
+This has all the base functions for other classes
+"""
 import json
 
 

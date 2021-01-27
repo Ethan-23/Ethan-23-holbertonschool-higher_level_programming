@@ -2,6 +2,7 @@
 """
 This is the Rectangle Class made as a parent of the base class
 This has all the base functions for the rectangle class
+Im adding random words at this point thanks
 """
 from models.base import Base
 

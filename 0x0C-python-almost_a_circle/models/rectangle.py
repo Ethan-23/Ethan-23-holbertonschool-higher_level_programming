@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This is a rectangle class"""
+"""
+This is the Rectangle Class made as a parent of the base class
+This has all the base functions for the rectangle class
+"""
 from models.base import Base
 
 

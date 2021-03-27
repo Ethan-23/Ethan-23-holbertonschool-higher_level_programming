@@ -12,9 +12,10 @@ if __name__ == "__main__":
                              database=sys.argv[3],
                              port=3306)
     statesc = states.cursor()
-    statesc.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC;".format(sys.argv[4]))
+    statesc.execute("SELECT * FROM states ORDER BY id ASC")
     rows = statesc.fetchall()
     for i in rows:
+        if sys.argv[4] == i[1]:
             print(i)
     statesc.close()
     states.close()

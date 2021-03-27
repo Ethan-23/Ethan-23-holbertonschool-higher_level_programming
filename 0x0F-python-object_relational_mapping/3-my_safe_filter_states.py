@@ -15,7 +15,7 @@ if __name__ == "__main__":
     statesc.execute("SELECT * FROM states ORDER BY id ASC;")
     rows = statesc.fetchall()
     for i in rows:
-        if sys.argv[4] == i[1]:
+        if i[1] == sys.argv[4]:
             print(i)
     statesc.close()
     states.close()

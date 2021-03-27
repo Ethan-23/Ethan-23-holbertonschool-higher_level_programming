@@ -12,7 +12,7 @@ if __name__ == "__main__":
                              database=sys.argv[3],
                              port=3306)
     statesc = states.cursor()
-    statesc.execute("SELECT cities.state_id, cities.name, states.name FROM cities LEFT JOIN states ON\
+    statesc.execute("SELECT cities.id, cities.name, states.name FROM cities LEFT JOIN states ON\
     states.id = cities.state_id ORDER BY cities.id ASC;")
     rows = statesc.fetchall()
     for i in rows:

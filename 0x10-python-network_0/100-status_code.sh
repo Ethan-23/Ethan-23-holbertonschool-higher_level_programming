@@ -1,3 +1,3 @@
 #!/bin/bash
 #comment
-curl -o /dev/null -sw "%{http_code}\n" "$1"
+curl -sw "%{http_code}\n" "$1" -o /dev/null

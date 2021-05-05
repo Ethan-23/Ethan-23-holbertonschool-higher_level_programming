@@ -7,7 +7,7 @@ request.get({ url: swapi}, function (error, response, body) {
   for (const charapi of chars) {
     request.get({ url: charapi }, function (error, response, body) {
       if (error) console.error(error);
-      console.log(JSON.parse(body).name)
+      console.log(JSON.parse(body).name);
     });
   }
 });

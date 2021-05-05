@@ -7,8 +7,8 @@ request.get({ url: process.argv[2] }, function (error, response, body) {
   for (let i = 0; i < titlelist.length; i++) {
     for (let j = 0; j < titlelist[i].characters.length; j++) {
       if (titlelist[i].characters[j].split('/')[5] === '18') {
-	count++;
-	break;
+        count++;
+        break;
       }
     }
   }
